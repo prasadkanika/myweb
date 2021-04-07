@@ -1,0 +1,148 @@
+
+.c1{background-color:black;color:white;opacity:0.9}
+.c2{background-color:gray;color:white;}
+.heading{font-family: 'Redressed', cursive;font-size:2.5em}
+#panel{display:none}
+#flip{cursor:pointer}
+#panel1{display:none}
+#flip1{cursor:pointer}
+#head{color:darkred}
+.icon{size:10px}
+.tb{background-color:black;opacity:0.6}
+.nav-link{color:white}
+.red{color:red;}
+.txt{width:300px;}
+.nav-link:hover{color:white;opacity:0.6}
+.bgimg{background-image: url("images/cover.jpg");
+min-height: 380px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+.box{
+    box-shadow:3px 3px 5px darkred;
+}
+.spltxt{
+    color:midnightblue;
+}
+div.anim {
+  position: relative;
+  animation: mymove 5s;
+}
+.anim {animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+u:hover{color:darkred}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid mintcream;
+  outline: none;
+  background-color: midnightblue;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow:  4px 4px 5px gray;
+}
+
+#myBtn:hover {
+  background-color: brown;
+}
+
+
+
+
+
+#con {
+
+    background-color: yellow;
+    padding-left: 30px;
+}
+#con1 {
+
+    background-color:midnightblue;color:white;
+    padding-left: 30px;
+}
+#height, #weight {
+    width: 150px;
+    height: 25px;
+    margin-top: 30px;
+}
+
+#weight-guide{
+    margin-left: 75px;
+    margin-top: 25px;
+}
+
+#results{
+    font-size: 35px;
+    margin-left: 90px;
+    margin-top: 20px;
+    color: blue;
+}
+
+#cal,#cal1{
+    width: 150px;
+    height: 35px;
+    margin-left: 90px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: blue;
+    color: #fff;
+    font-size: 25px;
+}
+#cal1{background-color:yellow;color:blue;}
+#h1{
+    padding-left: 15px;
+    padding-top: 25px;
+}

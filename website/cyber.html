@@ -1,0 +1,239 @@
+<!doctype html>
+<html >
+  <head>
+      <title>Web solutions and E learning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://kit.fontawesome.com/834b138f24.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/v4-shims.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="jQ.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/v4-shims.css">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href='sheet1.css' rel='stylesheet'>
+<script async="async" src="https://static.mobilemonkey.com/js/100785561968371.js"></script>
+<script>
+window.mmDataLayer = window.mmDataLayer || [];
+function mmData(o) { mmDataLayer.push(o); }
+</script>
+</head>
+<style>
+#oop{
+    background:black
+}
+</style>
+<body>
+    <div id="mySidenav" class="sidenav" >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="course.html">courses</a>
+      <a href="tips.html">Python Trick's</a>
+      <a href="java.html">Learn Java</a>
+      <a href="donate.html">Donate</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" ><i class="fas fa-arrow-up"></i></button>
+    <div class='text-center container-fluid' id='oop'>
+        <img src='images/ehack.png' style='width:800px;height:400px'></img>
+    </div>
+    <br/><br/><br/>
+    <div class='container-fluid p-3'>
+        <h2 class='heading  border-bottom'>1.SQL Injection</h2><br/>
+        <div class='row p-3'>
+            <div class='col-sm-4'>
+                <img src="images/sql.png" style="width:100%">
+            </div>
+            <div class='col-sm-8'>
+                A code injection happens when an attacker sends invalid data to the web application with the intention to make it do something that the application was not designed/programmed to do.<br/><br/>
+
+                Perhaps the most common example around this security vulnerability is the <b>SQL query consuming untrusted data</b>. You can see one of OWASP’s examples below:<br/><br/>
+
+                <b>String query = “SELECT * FROM accounts WHERE custID = ‘” + request.getParameter(“id”) + “‘”;</b><br/><br/>
+
+                This query can be exploited by calling up the web page executing it with the following URL: http://example.com/app/accountView?id=’ or ‘1’=’1 causing the return of all the rows stored on the database table.<br/><br/>
+
+                The core of a code injection vulnerability is the lack of validation and sanitization of the data used by the web application, which means that this vulnerability can be present on almost any type of technology.<br/><br/>
+
+                Anything that accepts parameters as input can potentially be vulnerable to a code injection attack.<br/><br/>
+                For more details refer: <a href='https://sucuri.net/guides/what-is-sql-injection/'>SQL Injection vulnerabilities</a>
+            </div>
+        </div><br/><br/>
+        <h2 class='heading  border-bottom'>2.Broken Authentication</h2><br/>
+        <div class='row p-3'>
+            <div class='col-sm-8'>
+                A broken authentication vulnerability can allow an attacker to use manual and/or automatic methods to try to gain control over any account they want in a system – or even worse – to gain complete control over the system.<br/><br/>
+
+                Websites with broken authentication vulnerabilities are very common on the web. Broken authentication usually refers to logic issues that occur on the application authentication’s mechanism,
+                like bad session management prone to username enumeration – when a malicious actor uses brute-force techniques to either guess or confirm valid users in a system.<br/><br/>
+
+                To minimize broken authentication risks avoid leaving the login page for admins publicly accessible to all visitors of the website:<br/><br/>
+                <ul>
+                    <li>/administrator on Joomla!,</li>
+                    <li>/wp-admin/ on WordPress,</li>
+                    <li>/index.php/admin on Magento,</li>
+                    <li>/user/login on Drupal.</li>
+                </ul><br/><br/>
+                The second most common form of this flaw is allowing users to brute force username/password combination against those pages.
+                for more details about brute force have a look on :<a href='https://sucuri.net/guides/what-is-brute-force-attack/'>Brute force</a>
+            </div>
+            <div class='col-sm-4'>
+                <img src="images/brokena.png" style="width:400px">
+            </div>
+        </div><br/><br/>
+        <h2 class='heading  border-bottom'>3.Sensitive Data Exposure</h2><br/>
+        <div class='row p-3'>
+            <div class='col-sm-4'>
+                <img src="images/sdv.png" style="width:100%">
+            </div>
+            <div class='col-sm-8'>
+                Sensitive data exposure is one of the most widespread vulnerabilities on the OWASP list. It consists of compromising data that should have been protected.<br/><br/>
+                Some sensitive data that requires protection is:<br/>
+                <ul>
+                    <li>Credentials</li>
+                    <li>Credit card numbers</li>
+                    <li>Personally identifiable information (PII)</li>
+                    <li>Social Security Numbers</li>
+                    <li>Medical information</li>
+                    <li>Other personal information</li>
+                </ul><br/><br/>
+                It is vital for any organization to understand the importance of protecting users’ information and privacy. All companies should comply with their local privacy laws.<br/><br/>
+
+Responsible sensitive data collection and handling have become more noticeable especially after the advent of the General Data Protection Regulation (GDPR). This is a new data privacy law that came into effect May 2018. It mandates how companies collect, modify, process, store, and delete personal data originating in the European Union for both residents and visitors.<br/><br/>
+            </div>
+       </div><br/><br/>
+       <h2 class='heading  border-bottom'>4. XML External Entities (XXE)</h2><br/>
+       <div class='row p-3'>
+           <div class='col-sm-8'>
+               According to Wikipedia, an XML External Entity attack is a type of attack against an application that parses XML input. This attack occurs when XML input containing a reference to an external entity is processed by a weakly configured XML parser.<br/><br/>
+
+               Most XML parsers are vulnerable to XXE attacks by default. That is why the responsibility of ensuring the application does not have this vulnerability lays mainly on the developer.<br/><br/>
+
+               According to the OWASP Top 10, the XML external entities (XXE) main attack vectors include the exploitation of:<br/><br/>
+               <ul>
+                   <li>Vulnerable XML processors if malicious actors can upload XML or include hostile content in an XML document</li>
+                   <li>Vulnerable code</li>
+                   <li>Vulnerable dependencies</li>
+                   <li>Vulnerable integrations</li>
+               </ul><br/><br/>
+        </div>
+           <div class='col-sm-4'>
+               <img src="images/xml.png" style="width:400px;height:200px">
+           </div>
+       </div><br/><br/>
+
+        <h2 class='heading  border-bottom'>5.Broken Access Control</h2><br/>
+       <div class='row p-3'>
+           <div class='col-sm-4'>
+               <img src="images/broken.png" style="width:100%">
+           </div>
+           <div class='col-sm-8'>
+               In website security, access control means putting a limit on what sections or pages visitors can reach, depending on their needs.<br/><br/>
+               For example, if you own an ecommerce store, you probably need access to the admin panel in order to add new products or to set up a promotion for the upcoming holidays. However, hardly anybody else would need it.
+               Allowing the rest of your website’s visitors to reach your login page only opens up your ecommerce store to attacks<br/><br/>
+               It is vital for any organization to understand the importance of protecting users’ information and privacy. All companies should comply with their local privacy laws.<br/><br/>
+
+               And that’s the problem with almost all major content management systems (CMS) these days.
+                By default, they give worldwide access to the admin login page. Most of them also won’t force you to establish a two-factor authentication method (2FA).<br/><br/>
+               The above makes you think a lot about software development with a security-first philosophy.<br/><br/>
+           </div>
+      </div><br/><br/>
+      <!-- security -->
+      <h2 class='heading  border-bottom'>6. Security Misconfigurations</h2><br/>
+      <div class='row p-3'>
+          <div class='col-sm-8'>
+              At its core, brute force is the act of trying many possible combinations, but there are many variants of this attack to increase its success rate. Here are the most common:<br/><br/>
+              <ul>
+                  <li>Unpatched flaws</li>
+                  <li>Default configurations</li>
+                  <li>Unused pages</li>
+                  <li>Unprotected files and directories</li>
+                  <li>Unnecessary services</li>
+              </ul><br/><br/>
+              One of the most common webmaster flaws is keeping the CMS default configurations.<br/><br/>
+
+              Today’s CMS applications (although easy to use) can be tricky from a security perspective for the end users. By far, the most common attacks are entirely automated. Many of these attacks rely on users to have only default settings.<br/><br/>
+              This means that a large number of attacks can be mitigated by <b>changing the default settings </b>when installing a CMS.<br/><br/>
+              There are settings you may want to adjust to control comments, users, and the visibility of user information. The file permissions are another example of a default setting that can be hardened.<br/><br/>
+       </div>
+          <div class='col-sm-4'>
+              <img src="images/smis.png" style="width:100%;height:300px">
+          </div>
+      </div><br/><br/>
+      <!-- cross -->
+      <h2 class='heading  border-bottom'>7.Cross-Site Scripting (XSS)</h2><br/>
+     <div class='row p-3'>
+         <div class='col-sm-4'>
+             <img src="images/cs.png" style="width:100%;height:250px">
+         </div>
+         <div class='col-sm-8'>
+             Cross Site Scripting (XSS) is a widespread vulnerability that affects many web applications. XSS attacks consist of injecting malicious client-side scripts into a website and using the website as a propagation method.<br/><br/>
+             The risks behind XSS is that it allows an attacker to inject content into a website and modify how it is displayed, forcing a victim’s browser to execute the code provided by the attacker while loading the page.<br/><br/>
+             <b>XSS is present in about two-thirds of all applications.</b><br/><br/>
+
+             Generally, XSS vulnerabilities require some type of interaction by the user to be triggered, either via social engineering or via a visit to a specific page. If an XSS vulnerability is not patched, it can be very dangerous to any website.<br/><br/>
+             For more details go to : <a href='https://sucuri.net/guides/what-is-cross-site-scripting/'>cross-site scripting</a><br/><br/>
+         </div>
+    </div><br/><br/>
+    </div>
+    <br/><br/>
+    <footer class='bt-20'>
+        <div class='container-fluid bg-dark text-white'>
+            <div class='row'>
+                <div class='col-md-8 mx-auto'>
+                    <p clas='text-muted text-center'>copyrights &copy; My own website</p>
+                    <ul class='list-inline text-center'>
+                        <li class='list-inline-item'><a href='https://www.facebook.com/prasad.kanika'><i class="fab fa-facebook text-light fa-2x"></i></a></li>
+                        <li class='list-inline-item'><a href='https://instagram.com/prasadkanika24?igshid=nt5jrnchk28'><i class="fab fa-instagram text-light fa-2x"></i></a></li>
+                        <li class='list-inline-item'><a href='#'><i class="fab fa-linkedin text-light fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script >
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        //document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        //document.getElementById("main").style.marginLeft= "0";
+    }
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <title>Drag&Drog</title>
+<head>
+<style>
+    .dd{
+        display:inline-block;
+        border:2px solid black;
+        padding:15px;
+        position:absolute;
+        cursor:pointer;
+    }
+    #garbage{
+        position:absolute;height:100px;width:100px;
+        background-color:black;
+        left:500px;top:300px;
+    }
+    .new{color:red;}
+</style>
+<body>
+    <div class='dd'>html</div>
+    <div class='dd'>css</div>
+    <div class='dd'>js</div>
+    <div class='dd'>b1</div>
+    <div class='dd'>b2</div>
+    <div class='dd'>b3</div>
+    <div id='garbage'></div>
+</body>
+<script>
+alert('HI! this is prasad\n click on the boxes to clone and drop it in black bok to del it')
+    const l=document.querySelectorAll('.dd');
+    const gar=document.getElementById('garbage');
+    let h={};
+    l.forEach(function(el,i){
+        el.addEventListener('click',function(e){
+            console.log(i);
+            h.obj=el.cloneNode(true);
+            h.obj.style.cursor='move';
+            h.obj.classList.add('new');
+            h.obj.style.backgroundColor=rclr();
+            h.obj.style.left=el.offsetLeft+'px';
+            h.obj.style.top=el.offsetTop+200+'px';
+            h.obj.x=el.offsetLeft;
+            h.obj.y=el.offsetTop;
+            h.obj.moves=Math.floor(Math.random()*25);
+            h.obj.int=setInterval(mov,25);
+            function mov(){
+                if(h.obj.moves<=0){
+                    clearInterval(h.obj.int);
+                }else{
+                    h.obj.moves--;
+                    h.obj.y+=10;h.obj.x+=1;
+                    h.obj.style.top=h.obj.y+'px';
+                    h.obj.style.left=h.obj.x+'px';
+                }
+            }
+            document.body.appendChild(h.obj);
+            drag(h.obj);
+        })
+        el.style.left=i*100+'px';
+    })
+    function rclr(){
+        return '#'+c()+c()+c()
+        function c(){
+            let hex= Math.floor(Math.random()*256).toString(16);
+            hex=('0'+String(hex)).substr(-2);
+            return hex;
+        }
+    }
+    function drag(el){
+        let pos={};
+        el.onmousedown=dm;
+        function dm(e){
+            pos.nx=e.clientX;
+            pos.ny=e.clientY;
+            console.log(pos.nx,pos.ny)
+            document.onmouseup=function(){
+                document.onmouseup=null;
+                document.onmousemove=null;
+            }
+            document.onmousemove=function(e){
+                pos.ox=pos.nx-e.clientX;
+                pos.oy=pos.ny-e.clientY;
+                pos.nx=e.clientX;
+                pos.ny=e.clientY;
+                if(isCollide(el)){
+                    console.log("OVER");
+                    el.onmousedown=null;
+                    el.parentElement.removeChild(el);
+                }
+                el.style.top=(el.offsetTop-pos.oy)+'px';
+                el.style.left=(el.offsetLeft-pos.ox)+'px';
+            }
+        }
+    }
+    function isCollide(a){
+        let aRect=a.getBoundingClientRect();
+        let bRect=gar.getBoundingClientRect();
+        return !((aRect.bottom<bRect.top)||(aRect.top>bRect.bottom)||(aRect.right<bRect.left)||(aRect.left>bRect.right))
+    }
+</script>
+<html>

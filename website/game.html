@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+    <title>guess the number</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+<style>
+#panel{display:none}
+#flip{cursor:pointer}
+/*
+div.hd {
+width: 150px;
+height: 50px;
+position:relative;
+animation-name: example;
+animation-duration: 4s;
+animation-iteration-count: 2;
+animation-direction: alternate;
+animation-delay:5s;
+}
+div.rules{
+    animation-duration:10s;
+    animation-name:e1;
+    animation-iteration-count: infinite;
+}
+@keyframes e1{
+    14.28% {background-color:#808080}
+    28.58% {background-color:#c0c0c0}
+    42.84% {background-color:white}
+    57.12% {background-color:#f0f8ff}
+    71.40% {background-color:#e6e6fa}
+    85.68% {background-color:#e0ffff}
+    100% {background-color:#87cefa}
+}
+@keyframes example {
+0%   {background-color:red; left:0px; top:0px;}
+25%  {background-color:yellow; left:200px; top:0px;}
+50%  {background-color:blue; left:200px; top:200px;}
+75%  {background-color:green; left:0px; top:200px;}
+100% {background-color:red; left:0px; top:0px;}
+}
+    body{padding:0px 0px 0px 25px;background-color:#D0CEE2;
+    }
+
+
+    .rules{
+
+        float:right;
+        height:100px;
+        width:380px;
+        background-color:#c6c6c6;
+        border:3px solid black;
+        padding:4px;
+        border-radius: 15px 50px 30px 5px;
+        overflow:scroll;
+        transition:transform 2s;
+    }
+    .rules:hover{
+        transform:rotate(360deg)
+    }
+    .hd{
+        font-size:1.2em;
+    }
+    emp{
+        color:#000080;cursor:pointer;
+    }
+    emp:hover{color:#f0f8ff;}
+    .c{
+        border:3px solid red;
+        padding:4px;
+        width:400px;
+        background-color:lightgrey;
+        position:fixed;
+        top:650px;
+    }
+    .time{
+        position:absolute;left:820px;top:350px;
+        border:2px solid black;
+        width:70px;padding:10px;
+        background-color:#f0f8ff;
+        border-radius: 15px 50px 30px
+    }
+    #pd{
+        font-size:1.5em;position:absolute;left:700px;top:330px
+    }
+    button{transition: width 2s;}
+    button:hover{color:green;width:80px}*/
+</style>
+<body>
+    <div class='container-fluid p-3'>
+        <h1 class='text-center'>Guess the number</h1>
+    </div>
+    <div class='container-fluid p-5'>
+        <div class='row'>
+            <div class='col-lg-6'>
+                <h4>Name    :  <input type='text' class='tx' required style='height:30px'></h4><br/><br/>
+                <div class='hd' ><b>Enter a number from 1 to 10</b></div><br/>
+                <h4>Number  :  <input type='number'  class='i' required></h4><br/><br/><br/>
+                <button onclick='count()' class='btn btn-info'>Submit</button><br/><br/>
+                <div class='container p-2'>
+                    <div class='op'></div><br/><br/>
+                </div>
+            </div>
+            <div class='col-lg-6'>
+                <p >Your win's status   &nbsp &nbsp <progress min="0" max="100" value="0" class='pro'></progress></p>
+                <p>prasad win's status    &nbsp &nbsp<progress min="0" max="100" value="0" class='pro1'></progress></p>
+            </div>
+        </div>
+    </div>
+    <div class='rules  container-fluid p-3' style='font-size:1.2em' id='flip'>
+        <div  class='col-lg-7'>
+            <b style='font-size:1.2em'>How to play &nbsp<sub>click</sub></b>
+            <p id='panel'><br/>
+                You have to enter a number from 1 to 10.If the number you entered is same as the number
+                assumed by the computer
+                then you will win the game else computer wins and it show's as prasad wins as he is the admin</p>
+            </div>
+    </div>
+
+    <!-- <textarea class='tx' placeholder='Enter your name'></textarea>
+    <input type='number' value=0 class='i'>
+    <button onclick='count()'>Submit</button><br/>-->
+
+    <br/>
+    <!--    <p class='c'>Developer details:<br/>
+        This game was fully i.e.  from strach developed by prasad.k without any source code or any frameworks
+        For the source code mail to <emp>prasad.kanika24@gmail.com<emp>
+        </p>    -->
+
+    <div class='container-fluid p-3'>
+
+        <div class='col-sm-3'>
+            <p id='pd' >
+                <p class='time' style='font-size:2.4em;border:2px solid lavender;padding:26px;background-color:#f0f8ff;'></p>
+            </p>
+
+        </div>
+    </div>
+<body>
+    <script>
+    window.onload=gtime;
+    $(document).ready(function(){
+    $("#flip").click(function(){
+      $("#panel").slideToggle(1000);
+    })
+    $("#flip1").click(function(){
+      $("#panel1").slideToggle(1000);
+    })
+    ;});
+
+        const b=document.querySelector('button');
+        const txt=document.querySelector('.tx')
+        const gp=document.querySelector('.n')
+        let bc=0;let pwin=1;let uwin=1
+        let v=document.querySelector('.i');
+        const o=document.querySelector('.op');
+        const prog=document.querySelector('.pro');
+        const prog1=document.querySelector('.pro1');
+        function count(){bc=bc+1;}
+        function gtime(){
+            var time=new Date();
+            const live=document.querySelector('.time');
+            live.innerHTML=checkTime(time.getHours())+":"+checkTime(time.getMinutes())+":"+checkTime(time.getSeconds());
+            var t=setTimeout(gtime,500);
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+        /*function hasNumber(myString) {
+            return /\d/.test(myString);
+        }*/
+        b.addEventListener('click',submit);
+        function submit(e){
+            let hasNumber= s => /\d/.test(s)
+            if((pwin%6==0)||(uwin%6==0))
+                getAJoke()
+            if(hasNumber(txt.value)){o.style.color='red';o.innerHTML='AlphaNumerics can\'t be treated as Name'}
+            else{
+            if(txt.value=='Enter your name' || txt.value==''){o.style.color='red';o.innerHTML='Please enter a valid name'}
+
+            else{
+            if(v.value>0 && v.value<11){
+                o.style.color='blue';
+            const pv=Math.floor(Math.random()*10)+1;
+            if(v.value==pv){
+                o.style.color='green';
+                uwin+=1
+                o.innerHTML=txt.value+ ' selected '+v.value+' computer assume '+pv+' so '+ txt.value+' win ';
+                prog.value=(uwin/bc)*100;
+            }else{
+                o.style.color='darkred';
+                pwin+=1
+                o.innerHTML=txt.value+' selected '+v.value+' computer assume '+pv+' so PRASAD win \n Total games played '+bc;
+                prog1.value=(pwin/bc)*100;
+            }
+        }else{
+            o.style.color='red';
+        o.innerHTML='Please enter a number from 1 to 10'}
+
+}
+}
+}
+
+    function getAJoke(){
+        if(window.confirm('seems you are bored with the game. click ok to get a joke'))
+            window.location.href='paid.html'
+        else{alert('click close to continue to game')}
+    }
+    </script>
+<html>

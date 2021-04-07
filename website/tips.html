@@ -1,0 +1,340 @@
+<!doctype html>
+<html >
+  <head>
+      <title>Code with Prasad</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://kit.fontawesome.com/834b138f24.js" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="jQ.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href='sheet1.css' rel='stylesheet'>
+  <script async="async" src="https://static.mobilemonkey.com/js/100785561968371.js"></script>
+  <script>
+  window.mmDataLayer = window.mmDataLayer || [];
+  function mmData(o) { mmDataLayer.push(o); }
+  </script>
+  <style>
+  .cc1{
+      background:lavenderblush;
+      font-size:1.5em;
+
+  }
+  #dc{box-shadow:6px 6px 3px}
+  p{font-size:1em;}
+  span{color:red; font-size:1.2em;background:white;}
+#oop{
+    background:midnightblue;color:white
+}
+.bord{
+    border-style: solid;
+  border-width: medium;
+}
+  </style>
+  <body>
+      <div id="mySidenav" class="sidenav" >
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="course.html">courses</a>
+          <a href="java.html">Learn Java</a>
+          <a href="donate.html">Donate</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+<br/>
+  <div class='anim'><h1 class='heading text-center'>Python trick's <sub>code with prasad</sub></h1></div><br/><br/>
+  <mark style="font-size:1.6em">Try to execute the code in the in-built interpreter(code editor)</mark>
+  <div class='spy' data-spy="scroll" data-target=".spy" data-offset="50">
+      <u><h2 class='text-center'>Page content</h2></u>
+      <nav class="navbar navbar-expand-sm bg-dark ">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#st">Simple trick's</a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#dec">Decorators</a></li>
+      <li class="nav-item"><a class="nav-link" href="#set">Python Sets</a></li>
+      <li class="nav-item"><a class="nav-link" href="#re"> Regex</a></li>
+      <li class="nav-item"><a class="nav-link" href="#oop"> OOP</a></li>
+      <li class="nav-item"><a class="nav-link" href="#editor">Code editor</a></li>
+    </ul>
+  </nav>
+</div><br/><br/>
+  <h2 class=' heading' style='font-size:3em'>simple Programs</h2>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top" ><i class="fas fa-arrow-up"></i></button>
+  <div class='container-fluid c1 p-3' id='st'>
+       <div class='row'>
+          <div class='col-sm-4 '>
+              <h3>Swapping two numbers</h3>
+              <img src='images/swap.png' style='width:100%;height:180px'>
+          </div>
+          <div class='col-sm-4'>
+              <h3>Reverse a string</h3>
+              <img src='images/rev.png' style='width:100%;height:180px'>
+          </div>
+          <div class='col-sm-4'>
+              <h3>Create a string from list</h3>
+              <img src='images/join.png' style='width:100%;height:180px'>
+          </div>
+      </div><br/>
+      <div class='row'>
+          <div class='col-sm-4'>
+              <h3>Multiple values from function</h3>
+              <img src='images/mv.png' style='width:100%;height:180px'>
+          </div>
+          <div class='col-sm-4'>
+              <h3>Dictionary from two lists</h3>
+              <img src='images/di.png' style='width:100%;height:180px'>
+          </div>
+          <div class='col-sm-4'>
+              <h3>Matrix Transpose</h3>
+              <img src='images/mt.png' style='width:100%;height:180px'>
+          </div>
+      </div><br/>
+      <div class='row'>
+          <div class='col-sm-4'>
+              <h3>ANAGRAMS</h3>
+              <img src='images/ana.png' style='width:100%;height:180px'>
+          </div>
+          <div class='col-sm-4'>
+              <h3>Highest Medal count</h3>
+              <img src='images/mc.png' style='width:100%;height:180px'>
+          </div>
+          <div class='col-sm-4'>
+              <h3>Generators</h3>
+              <img src='images/gen.png' style='width:100%;height:250px'>
+          </div>
+      </div>
+  </div>
+  <br/><br/>
+  <!-- decorators -->
+
+<div class='container-fluid p-3 bord' id='dec'>
+     <h2 class='text-center'>Decorators</h2><br/>
+     <b>Python Decorators </b>is a design pattern in Python that allows a user to add new functionality to an existing object without modifying its structure. ...
+          Decorators are usually called before the definition of a function you want to decorate<br/><br/>
+    <div class='row'>
+        <div class='col-sm-5'>
+            <img src='images/dec.png' style='width:100%;height:300px'>
+        </div>
+        <div class='col-sm-7'>
+            Let's understand this code. In python a function a return a another function.<br/>
+            In this code <b>dec</b> is a function which is returning a another function named <b>inner</b> But the print statement in inner function won't executed until we call it.<br/>
+            <br/>Let's see the <b>flow of execution </b> of this code:<br/>
+            1. <b>fun1=dec(function) </b> in this instruction <b>dec</b> function was called by passing tha method <b>function</b> as a parameter and the result is stored in <b>fun1</b> <br/>
+             Now the <b>fun1</b> variable's value is <b>inner</b><br/>
+             2.<b>fun1()</b>  in this instruction fun1 is called i.e.. it's value inner is going to called.<br/>
+             Now the control goes to inner function adn execute the print statement and then it call the method <b>func()</b> i.e.. func have value function so, <b>function </b> method is going to call.
+             <br/>
+             And finally output is :<br/><mark>
+             decorator code<br/>
+             executed successfully!!!</mark>
+        </div>
+        </div><br/><br/>
+        <div class='row'>
+            <div class='col-sm-6'>
+                Now let's jump into <b>Decorators</b><br/>
+                Let's do the same thing which we did in above code but add some little meaning to it.<br/>
+                <b>fun1=dec(function)</b> is going to replace with <b>@dec</b><br/>
+                by placing the <b>@dec</b> just above the method <b>function</b> and calling the method <b>function</b> we can obtain the same output as we saw in the above code<br/>
+                This is how the decorators work's
+
+            </div>
+            <div class='col-sm-5'>
+                <img src='images/dec1.png' style='width:100%;height:300px'>
+            </div>
+        </div>
+</div><br/><br/>
+  <!-- Python Sets --><h2 class='text-center'>Python Sets</h2><br/>
+  <div class='container-fluid p-3 c1' id='set'>
+      <div style='background:azure;color:black'>
+      1. python sets doesn't allow duplications<br/>
+      2. set elements are random, you may or may not get same sequence while printing</div><br/>
+       <div class='row'>
+          <div class='col-sm-4 '>
+              <h3>Sets</h3>
+              <img src='images/set.png' style='width:100%;height:200px'>
+          </div>
+          <div class='col-sm-6 '>
+              <h3>Union & Intersection</h3>
+              <img src='images/ui.png' style='width:100%;height:200px'>
+          </div>
+      </div><br/>
+      <div class='row'>
+          <div class='col-sm-5'>
+              <h3>Symmetric difference</h3>
+              <img src='images/sd.png' style='width:100%;height:180px'>
+          </div>
+          <div class='col-sm-5'>
+              <h3>Set Difference</h3>
+              <img src='images/diff.png' style='width:100%;height:180px'>
+          </div>
+      </div>
+  </div><br/><br/>
+<!-- REGEX -->
+<h2 class='text-center'>REGEX</h2><br/>
+<div class='container-fluid c1 p-3' id='re' style='background:aqua;color:black'>
+     <div class='row'>
+        <div class='col-sm-4 '>
+            <h3>Extract Numbers form string</h3>
+            <img src='images/num.png' style='width:100%;height:200px'>
+        </div>
+        <div class='col-sm-4 '>
+            <h3>Substring in a string</h3>
+            <img src='images/sub.png' style='width:100%;height:200px'>
+        </div>
+        <div class='col-sm-4 '>
+            <h3>Substitute character in space</h3>
+            <img src='images/sub1.png' style='width:100%;height:200px'>
+        </div>
+    </div><br/>
+    <div class='row'>
+        <div class='col-sm-4 '>
+            <h3>Find alphabets in a string</h3>
+            <img src='images/fi.png' style='width:100%;height:200px'>
+        </div>
+        <div class='col-sm-4 '>
+            <h3>specific number of occurrences</h3>
+            <img src='images/spe.png' style='width:100%;height:200px'>
+        </div>
+        <div class='col-sm-4 '>
+            <h3>Paranthesis Balancing</h3>
+            <img src='images/par.png' style='width:100%;height:200px'>
+        </div>
+    </div>
+</div><br/>
+<!-- OOP -->
+<div class='container-fluid p-3' id='oop'>
+    <h2 class='heading text-center'>OOP</h2><br/>
+    <div class='row'>
+        <div class='col-sm-4 '>
+            <h3>Python constructors</h3>
+            <img src='images/cons.png' style='width:100%;height:500px'>
+        </div>
+        <div class='col-sm-4 '>
+            <h3>Python Inheritance</h3>
+            <img src='images/in.png' style='width:100%;height:500px'>
+        </div>
+        <div class='col-sm-4 '>
+            <h3>Python Over-riding</h3>
+            <img src='images/over.png' style='width:100%;height:500px'>
+        </div>
+        </div><br/>
+        <div class='row'>
+        <div class='col-sm-5'>
+            <h3>Abstracton(data hiding)</h3>
+            <img src='images/abs.png' style='width:100%;height:500px'>
+        </div>
+        <div class='col-sm-5'>
+            <h3>Super keyword</h3>
+            <img src='images/sup.png' style='width:100%;height:500px'>
+        </div>
+
+    </div>
+</div>
+
+         <br/>
+          <!-- TIPS -->
+     <h2 class='text-center heading' style='font-size:3em'>Tips</h2>
+      <div class='container-fluid cc'>
+          <div class='row'>
+              <div class='col-sm-6'>
+          <ul>
+              <li><strong class='cc1'> Reading inputs which are in same line </strong></li>
+              <p>input: 1 2 3 4<br/>
+                  <mark>Syntax: list1=[int(k) for k in input().split()]</mark> or <br/>
+                  <mark>Syntax: list2=list(map(int,input().split()))</mark><br/></p>
+                  <span>NOTE:  list is a keyword so don't use it as a variable</span>
+                  <li><strong class='cc1'>printing elements in a list in a same line</strong></li>
+                  <p>list1=[1,2,3,4]<br/>output: 1 2 3 4<br/>
+                      <mark>Syntax: print(*list1,end=' ')</mark> or <br/>
+                      <mark>Syntax: print(' '.join(list1))</mark><br/></p>
+                      <span>NOTE:  <ul><li>'*' unpack the list and return each element</li>
+                                   <li>''.join() takes a list and join all the elements the resul is a type string.
+                               joinig the list based on what you are giving in the ''.join </li></ul>
+                      </span>
+                  </div>
+                  <div class='col-sm-6'>
+                <li><strong class='cc1'>all() function</strong></li>
+                <p>The python all() function accepts an iterable object (such as list, dictionary, etc.). It returns true if all items in passed iterable are true. Otherwise, it returns False.
+                     If the iterable object is empty, the all() function returns True.<br/>
+                 <mark>l=[True,False,1]<br/>
+                 print(all(l))</mark>#False<br/>
+                 <mark>l=[1<=9,5==5,97>8] <br/>
+                 print(all(l))</mark>#True
+             </p>
+             <li><strong class='cc1'>any() function</strong></li>
+             <p>Python any() function accepts iterable (list, tuple, dictionary etc.) as an argument and return true if any of the element in iterable is true, else it returns false.
+                 If iterable is empty then any() method returns false<br/>
+              <mark>l=[True,False,1]<br/>
+              print(any(l))</mark>#True<br/>
+              <mark>l=[1<=9,5==5,97>8] <br/>
+              print(any(l))</mark>#True
+          </p>
+         </div>
+          </ul>
+      </div>
+  </div>
+  <br/>
+  <!--<a href="images/abs.png" download="w3logo">click </a>-->
+  <div class='container-fluid' id='editor'>
+      <iframe src="https://trinket.io/embed/python/0af24e855f" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+  </div>
+  <br/>
+  <div class='container bg-info p-3' id='dc'>
+      <h2 >For Doubt clarifications Contact:</h2><br/>
+      <a href="https://api.whatsapp.com/send?phone=919989122809&amp;text=Hi there! I have a question :)"><button type='button' class='btn-success btn-lg'><i class="fab fa-whatsapp"></i></button></a>
+      <a href="mailto:support@prasad11.in"><button type='button' class='btn-info btn-lg'><i class="fas fa-envelope-open-text"></i></button></a>
+
+  </div>
+     <br/><br/><br/>
+     <footer class='bt-20'>
+         <div class='container-fluid bg-dark text-white'>
+             <div class='row'>
+                 <div class='col-md-8 mx-auto'>
+                     <p clas='text-muted text-center'>copyrights &copy; My own website</p>
+                     <ul class='list-inline text-center'>
+                         <li class='list-inline-item'><a href='https://www.facebook.com/prasad.kanika'><i class="fab fa-facebook text-light fa-2x"></i></a></li>
+                         <li class='list-inline-item'><a href='https://instagram.com/prasadkanika24?igshid=nt5jrnchk28'><i class="fab fa-instagram text-light fa-2x"></i></a></li>
+                         <li class='list-inline-item'><a href='#'><i class="fab fa-linkedin text-light fa-2x"></i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </footer>
+     <script >
+     var mybutton = document.getElementById("myBtn");
+     window.onscroll = function() {scrollFunction()};
+
+     function scrollFunction() {
+       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+         mybutton.style.display = "block";
+       } else {
+         mybutton.style.display = "none";
+       }
+     }
+
+     // When the user clicks on the button, scroll to the top of the document
+     function topFunction() {
+       document.body.scrollTop = 0;
+       document.documentElement.scrollTop = 0;
+     }
+
+     function openNav() {
+         document.getElementById("mySidenav").style.width = "250px";
+         //document.getElementById("main").style.marginLeft = "250px";
+     }
+
+     function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+         //document.getElementById("main").style.marginLeft= "0";
+     }
+     </script>
+  </body>
+</html>

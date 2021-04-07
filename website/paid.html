@@ -1,0 +1,79 @@
+<!doctype html>
+<html >
+  <head>
+      <title>prasad Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/834b138f24.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="jQ.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href='sheet1.css' rel='stylesheet'>
+</head>
+<style>
+body{
+    text-align:center;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    font-size: 2em;
+    width: 800px;
+    margin: 50px auto;
+}
+
+img{
+    width: 10%;
+    height: auto;
+}
+button{
+    font-size: .8em;
+    border-radius: 5px;
+    background-color: orange;
+    padding: 5px;
+    cursor:pointer;
+}
+</style>
+<body>
+    <img src='https://assets.chucknorris.host/img/avatar/chuck-norris.png'>
+   <div id="display-joke">Press the button below to retrieve a random Chuck Norris Joke!</div>
+   <button id="get-joke">Get Joke!</button><br><br><a href='game.html'><button id="get-joke">HOME</button></a>
+</body>
+<script>
+
+const image = document.querySelector('img');
+const jokeDIV = document.querySelector('#display-joke');
+const button = document.querySelector('#get-joke');
+
+button.addEventListener('click', function(){
+getRandomJoke();
+})
+
+function getRandomJoke(){
+const ajax = new XMLHttpRequest;
+const url = 'https://api.chucknorris.io/jokes/random'
+
+ajax.open('GET', url, true);
+
+ajax.onreadystatechange = function(){
+    if(this.status === 200 && this.readyState === 4){
+        console.log(this.responseText);
+        let data = JSON.parse(this.responseText);
+        jokeDIV.innerHTML = `${data.value}`
+    } else {
+        this.onerror = onerror();
+    }
+}
+ajax.send();
+}
+
+function onerror(){
+ jokeDIV.textContent = 'There was an error!';
+}
+</script>
+</html>
